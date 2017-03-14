@@ -8,12 +8,12 @@ function checkGuess(guess) {
     var index = Math.random() * answers.length;
 
     if (guess == answers[index]) {
-        answer = "You're right! I was thinking of " + answers[index];
+        answers = "You're right! I was thinking of " + answers[index];
     } else {
-        answer = "Sorry, I was thinking of " + answers[index];
+        answers = "Sorry, I was thinking of " + answers[index];
     }
 
-    return answer;
+    return answers;
 }
 
 console.log(checkGuess("red"));
