@@ -25,8 +25,7 @@ function displayLocation(position) {
 
     var km = computeDistance(position.coords, ourCoords);
     var distance = document.getElementById("distance");
-//    distance.innerHTML = "You are " + km + " km from the WickedlySmart HQ";
-    distance.innerHTML = "Ты находишься на расстоянии " + km + " km от Сашки :)";
+    distance.innerHTML = "You are " + km + " km from the WickedlySmart HQ";
 
     showMap(position.coords);
 }
@@ -69,14 +68,9 @@ function displayError(error) {
 
 var map = null;
 
-//var ourCoords = {
-//    latitude: 47.624851,
-//    longitude: -122.52099
-//};
-
 var ourCoords = {
-    latitude: 50.50370969999999,
-    longitude: 30.7561678
+    latitude: 47.624851,
+    longitude: -122.52099
 };
 
 function showMap(coords) {
