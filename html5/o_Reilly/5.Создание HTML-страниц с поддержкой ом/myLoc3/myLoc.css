@@ -1,0 +1,13 @@
+#distance, #location {
+    border: inset;
+    text-align: center;
+    height: 20px;
+    margin: 10px;
+}
+
+div#map {
+    margin: 15px;
+    height: 400px;
+    border: 2px solid black;
+    width: auto;
+}

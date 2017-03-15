@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Where am I?</title>
-    <script src="myLoc.js"></script>
+    <meta charset="utf-8">
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <link rel="stylesheet" href="myLoc.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp0Ps8sGo6HvLiSblhwmWBLSVtJlUXBsw&callback=initMap"
+            type="text/javascript"></script>
 
-    <style>
-        div{
-            border-color: #222222;
-            border: double;
-            height: 30px;
-            text-align: center;
-        }
-        #map{
-            height: 400px;
-        }
-    </style>
+    <script src="myLoc.js"></script>
+    <link rel="stylesheet" href="myLoc.css">
 </head>
 <body>
 
 <div id="location">
-    You location will go here.
+    Your location will go here.
 </div>
 
 <div id="distance">

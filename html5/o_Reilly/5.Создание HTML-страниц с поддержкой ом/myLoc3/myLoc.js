@@ -2,18 +2,17 @@
  * Created by Alexander on 15.03.2017.
  */
 
-var ourCoords = {
-    latitude: 47.624851,
-    longitude: -122.52099
-}
-
 window.onload = getMyLocation;
 
 function getMyLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(displayLocation, displayError)
-    } else {
-        alert("Oops no geolocation support")
+
+        navigator.geolocation.getCurrentPosition(
+            displayLocation,
+            displayError);
+    }
+    else {
+        alert("Oops, no geolocation support");
     }
 }
 
@@ -30,16 +29,33 @@ function displayLocation(position) {
 
     showMap(position.coords);
 }
+//вычисления
+function computeDistance(startCoords, destCoords) {
+    var startLatRads = degreesToRadians(startCoords.latitude);
+    var startLongRads = degreesToRadians(startCoords.longitude);
+    var destLatRads = degreesToRadians(destCoords.latitude);
+    var destLongRads = degreesToRadians(destCoords.longitude);
 
-//Диагностика
+    var Radius = 6371; // radius of the Earth in km
+    var distance = Math.acos(Math.sin(startLatRads) * Math.sin(destLatRads) +
+            Math.cos(startLatRads) * Math.cos(destLatRads) *
+            Math.cos(startLongRads - destLongRads)) * Radius;
+
+    return distance;
+}
+
+function degreesToRadians(degrees) {
+    radians = (degrees * Math.PI)/180;
+    return radians;
+}
+//обработка ошибок
 function displayError(error) {
     var errorTypes = {
         0: "Unknown error",
-        1: "Permission denied by user",
+        1: "Permission denied",
         2: "Position is not available",
-        3: "Request timed out"
-    }
-
+        3: "Request timeout"
+    };
     var errorMessage = errorTypes[error.code];
     if (error.code == 0 || error.code == 2) {
         errorMessage = errorMessage + " " + error.message;
@@ -48,39 +64,23 @@ function displayError(error) {
     div.innerHTML = errorMessage;
 }
 
-//вычисление
-function computeDistance(startCoords, destCoords) {
-    var startLadRads = degreesToRadians(startCoords.latitude);
-    var startLongRads = degreesToRadians(startCoords.longitude);
+//карта
 
-    var destLadRads = degreesToRadians(destCoords.latitude);
-    var destLongRads = degreesToRadians(destCoords.longitude);
+var map = null;
 
-    var radius = 6371;//радиус Земли в км
-
-    var distance = Math.acos(Math.sin(startLadRads) * Math.sin(destLadRads) +
-            Math.cos(startLadRads) * Math.cos(destLadRads) *
-            Math.cos(startLongRads - destLongRads)) * radius;
-
-    return distance;
-}
-
-function degreesToRadians(degrees) {
-    var radians = (degrees * Math.PI) / 180;
-    return radians;
-}
-
-//google map
-var map;
+var ourCoords = {
+    latitude: 47.624851,
+    longitude: -122.52099
+};
 
 function showMap(coords) {
-    var googleLatAndLong = new google.maps.LatLng(latitude, longitude);
-    var mapOption = {
+    var googleLatAndLong = new google.maps.LatLng(coords.latitude,
+        coords.longitude);
+    var mapOptions = {
         zoom: 10,
         center: googleLatAndLong,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-
+    };
     var mapDiv = document.getElementById("map");
-    map = new google.maps.Map(mapDiv, mapOption);
+    map = new google.maps.Map(mapDiv, mapOptions);
 }
