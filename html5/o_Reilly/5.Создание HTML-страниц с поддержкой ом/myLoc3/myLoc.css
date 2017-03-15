@@ -5,6 +5,10 @@
     margin: 10px;
 }
 
+#distance{
+    border-color: red;
+}
+
 div#map {
     margin: 15px;
     height: 400px;
