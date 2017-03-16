@@ -8,6 +8,7 @@ var ourCoords = {
     latitude: 47.624851,
     longitude: -122.52099
 };
+var prevCoords = null;
 
 window.onload = getMyLocation;
 
@@ -37,17 +38,21 @@ function displayLocation(position) {
 
     if (map == null) {
         showMap(position.coords);
+        prevCoords = position.coords;
     }
     else {
-        scrollMapToPosition(position.coords);
+        var meters = computeDistance(position.coords, prevCoords) * 1000;
+        if (meters > 20) {
+            scrollMapToPosition(position.coords);
+            prevCoords = position.coords;
+        }
     }
 }
-
-//кнопки
+// //кнопки
 function watchLocation() {
     watchId = navigator.geolocation.watchPosition(
         displayLocation,
-        displayError);
+        displayError/*,{timeout: 5000}*/);
 }
 function clearWatch() {
     if (watchId != null) {
@@ -89,12 +94,12 @@ function displayError(error) {
     var div = document.getElementById("location");
     div.innerHTML = errorMessage;
 }
-// //карта
+//карта
 function showMap(coords) {
     var googleLatAndLong = new google.maps.LatLng(coords.latitude,
         coords.longitude);
     var mapOptions = {
-        zoom: 10,
+        zoom: 13,
         center: googleLatAndLong,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -106,7 +111,7 @@ function showMap(coords) {
     var content = "You are here: " + coords.latitude + ", " + coords.longitude;
     addMarker(map, googleLatAndLong, title, content);
 }
-
+//маркер
 function addMarker(map, latlong, title, content) {
     var markerOptions = {
         position: latlong,
@@ -123,14 +128,17 @@ function addMarker(map, latlong, title, content) {
 
     var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
 
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function () {
         infoWindow.open(map);
     });
 }
-
-
-
-/*
+// //options
+// navigator.geolocation.getCurrentPosition(displayLocation, displayError, {
+//     enableHightAccuracy: true,
+//     timeout: 100,
+//     maximumAge: 0
+// })
+//история
 function scrollMapToPosition(coords) {
     var latitude = coords.latitude;
     var longitude = coords.longitude;
@@ -141,4 +149,4 @@ function scrollMapToPosition(coords) {
     // add the new marker
     addMarker(map, latlong, "Your new location", "You moved to: " +
         latitude + ", " + longitude);
-}*/
+}
