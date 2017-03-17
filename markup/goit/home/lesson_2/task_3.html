@@ -1,0 +1,80 @@
+<!--
+Задание 3
+Формы
+В файле task3.html необходимо сверстать форму как на изображении forms_hw.png
+Для переносов строк использовать тег br.
+Количество вариантов в поле год и месяц можно делать 3-4 (не обязательно перечислять все).
+Названия полей (name="") - на ваше усмотрение.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+<form>
+
+    <div>
+        <p>
+            Name<br>
+            <input type="text" placeholder="Anton" name="name"><br>
+        </p>
+        <p>
+            Email<br>
+            <input type="email" placeholder="Ivanov" name="email"><br>
+        </p>
+        <p>
+            Sex
+            <input type="radio" id="male" name="sex" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Female</label><br>
+        </p>
+        <p>
+            Current status<br>
+            <input type="checkbox" name="vehicle" value="student" title="student">Student<br>
+            <input type="checkbox" name="vehicle" value="employed" title="employed">Employed<br>
+            <input type="checkbox" name="vehicle" value="unemployed" title="unemployed">Unemployed<br>
+        </p>
+        <p>
+            Month and Year your birth<br>
+            <input type="month" name="month" value="month" title="month">
+        </p>
+        <p>
+            Skills and Technologies<br/>
+            <select multiple="multiple" size="10" name="skills" title="skills">
+                <optgroup label="Tech skills">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>git</option>
+                </optgroup>
+                <optgroup label="Soft skills">
+                    <option>Time management</option>
+                    <option>Proactivity</option>
+                    <option>Teamwork</option>
+                    <option>Leadership</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            Photo<br/>
+            <input type="file" name="photo"><br/>
+        </p>
+        <p><textarea rows="5" name="comments"></textarea><br/>
+        </p>
+        <p><input type="submit" name="results">
+        </p>
+    </div>
+</form>
+</body>
+</html>

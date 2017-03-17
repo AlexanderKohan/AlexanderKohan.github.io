@@ -1,0 +1,63 @@
+/*hide a checkbox button*/
+input {
+    display: none;
+}
+
+/*add style to on/off elements*/
+span {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/*style for three labels*/
+label {
+    text-decoration: underline;
+    margin: 5px;
+}
+
+/*adding background color to the elements (red, green, blue))*/
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+/*color font for the labels */
+[for="red"] {
+    color: red;
+}
+
+[for="blue"] {
+    color: blue;
+}
+
+[for="green"] {
+    color: green;
+}
+
+/*hiding elements with checked color*/
+#red:checked ~ .red,
+#blue:checked ~ .blue,
+#green:checked ~ .green {
+    display: none;
+}
+
+/*lower opacity for the "checked" label*/
+#red:checked ~ [for="red"] {
+    opacity: 0.5;
+}
+
+#blue:checked ~ [for="blue"] {
+    opacity: 0.5;
+}
+
+#green:checked ~ [for="green"] {
+    opacity: 0.5;
+}

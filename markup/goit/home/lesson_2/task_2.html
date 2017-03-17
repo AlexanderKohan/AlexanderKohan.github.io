@@ -1,0 +1,77 @@
+<!--Задание 2
+Таблицы
+В файле task2.html необходимо сверстать картину Пита Мондриана "Композиция с красным, синим и желтым" используя таблицу. Смотри файл tables_hw.png
+Привожу цвета используемые в картине:
+#fffa69 - желтый, #074481 - синий, #ff5b2d - красный, #000000 - черный, #ffffff - белый
+Пропорции картины и ячеек можно не сохранять. Важно объединение ячеек и их раскраска.
+В head следующий кусок кода-->
+
+<style type="text/css">
+    table { border-collapse: collapse; width: 400px;}
+    td { border: 5px solid #000; }
+</style>
+А разукрасить ячейку определенным цветом можно аттрибутом bgcolor
+<td bgcolor="#00000ff"><br/></td>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        td {
+            border: 5px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div align="middle">
+    <table>
+        <tr>
+            <td colspan="2" width="25%" height="50"><!--1.1--></td>
+            <td bgcolor="#ffffff" colspan="2" width="45%"><!--1.3--></td>
+            <td bgcolor="#fffa69" colspan="2" width="30%"><!--1.5--></td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" width="10%" height="130"><!--2.1--></td>
+            <td bgcolor="#ff5b2d" rowspan="2" colspan="3" height="270"><!--2.2--></td>
+            <td bgcolor="#fffa69" colspan="2" width="35%"><!--2.5--></td>
+        </tr>
+        <tr>
+            <td rowspan="2" height="200"><!--3.1--></td>
+            <td bgcolor="#ffffff" width="50"><!--3.5--></td>
+            <td bgcolor="#ffffff" width="73"><!--3.6--></td>
+        </tr>
+        <tr>
+            <td bgcolor="#151515"><!--4.2--></td>
+            <td bgcolor="#151515" width="20"><!--4.3--></td>
+            <td bgcolor="#ffffff" width="50" height="55"><!--4.4--></td>
+            <td bgcolor="#ffffff" colspan="2"><!--4.5--></td>
+        </tr>
+        <tr>
+            <td bgcolor="#fffa69" rowspan="3" height="135"><!--5.1--></td>
+            <td bgcolor="#151515" height="55"><!--5.2--></td>
+            <td bgcolor="#151515"><!--5.3--></td>
+            <td bgcolor="#ffffff"><!--5.4--></td>
+            <td bgcolor="#074481" rowspan="2" colspan="2"><!--5.5--></td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" rowspan="2" colspan="2"><!--6.2--></td>
+
+            <td bgcolor="#151515" height="25"><!--6.4--></td>
+        </tr>
+        <tr>
+            <td colspan="3"><!--7.4--></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
