@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.testimonial {
+    background: url("task2.jpg");
+    width: 100%;
+    min-height: 315px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.testimonials__inner {
+    width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.review__title {
+    padding-top: 58px;
+    padding-bottom: 48px;
+    color: #3170a8;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 span {
+    color: #ee8129;
+    font-weight: normal;
+}
+
+.review__testimonial {
+    overflow: hidden;
+    border-bottom: 20px ;
+}
+
+.testimonial__item__left {
+    float: left;
+    width: 480px;
+}
+
+.testimonial__item__right {
+    float: right;
+    width: 480px;
+}
+.testimonial_photo {
+    float: left;
+    width: 98px;
+    height: 98px;
+}
+
+.customer__block {
+    float: right;
+    display: block;
+    width: 365px;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    font-size: 14px;
+    box-sizing: border-box;
+    position: relative;
+
+    border: 1px solid #e0e0e0;
+}
+
+.customer__header {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-style: italic;
+    border-bottom: 1px dashed #666;
+    color: #3070a8;
+
+}
+.customer {
+    float: right;
+    margin-top: -20px;
+
+}
+
+.customer__text {
+    line-height: 20px;
+    color: #666;
+}
+
+.customer__block:before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 12px solid;
+    border-color: transparent white transparent transparent;
+    left: -24px;
+    top: 35px;
+}
+
+.name:before {
+    content: '-';
+    margin-right: 2px;
+    margin-left: -3px;
+}

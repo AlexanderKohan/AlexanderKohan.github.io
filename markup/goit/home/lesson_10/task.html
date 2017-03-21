@@ -1,0 +1,77 @@
+<!--Задание 1
+Необходимо сверстать блок из макета: lesson10.psd
+ТЗ:
+* блок должен быть адаптивным: при сужении окна в строке дложно оставаться 2 потом 1 блок.  
+* при расширении окна, максимально в строке должно оставаться только 3 блока с фото.
+* синяя подложка появляется на блоке по hover'у на него.  
+* на полдожке есть 2 кнопки. hover для кнопока прорисован в макете 
+* шрифт для заголовка 'Lato'
+* слой в котором увеличенная фотография пока не верстаем
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="task.css"/>
+</head>
+<body>
+<div class="photo">
+	<h1>Showcase your work like a pro.</h1>
+    <h3>Contact me if you like my work</h3>
+
+    <div class="gallery">
+        <div class="image">
+            <div class="visible"><img src="Image%2001.png" alt="image"/></div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+        <div class="image">
+            <div class="visible"><img src="Image%2002.png" alt="image"/></div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+        <div class="image">
+            <div class="visible"><img src="Image%2003.png" alt="image"/></div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+        <div class="image">
+            <div class="visible"><img src="Image%2004.png" alt="image"/></div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+        <div class="image">
+            <div class="visible"><img src="Image%2005.png" alt="image"/></div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+        <div class="image">
+            <div class="visible">
+                <img src="Image%2006.png" alt="image"/>
+            </div>
+            <div class="mask">
+                <button class="button link"><img src="Link.png" alt="link"/></button>
+                <button class="button zoom"><img src="Zoom.png" alt="zoom"/></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementsByClassName('zoom').onclick = function() {
+    };
+</script>
+</body>
+</html>

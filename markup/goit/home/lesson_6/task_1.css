@@ -1,0 +1,170 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.offers {
+    width: 900px;
+    background: white;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+}
+.offers h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #40525D;
+}
+h2, h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.offer__left, .offer__right {
+    display: inline-block;
+    width: 289px;
+    height: 440px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+	border-radius: 5px;
+	border: 1px solid #e8eaec;
+}
+.offer__middle {
+    display: inline-block;
+    width: 297px;
+    height: 470px;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 5px #EE8129;
+    margin: 50px -7px 0;
+    z-index: 3;
+    box-shadow: 0 0 9px 2px #cde2ee;
+}
+.offer__middle__top h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    background: #EE8129;
+    text-align: center;
+    margin: 0 auto;
+    height: 77px;
+    position: relative;
+    line-height: 75px;
+}
+.offer__left__top h3, .offer__right__top h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    height: 63px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    line-height: 65px;
+}
+.offer__left__top h3 {
+    background-color: #37c2d3;
+}
+.offer__right__top h3 {
+    background-color: #1cb79a;
+}
+.price h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #3F4042;
+    font-weight: bold;
+    margin: 16px auto;
+}
+.price h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 70px;
+    font-weight: bold;
+    color: #364959;
+}
+.price h2 sub, .price h2 sup {
+    font-size: 18px;
+    font-weight: 300;
+}
+ul {
+    list-style: none;
+    margin: 20px auto 0;
+    padding: 0;
+    width: 260px;
+}
+li {
+    text-align: left;
+    font-size: 15px;
+    color: #91949C ;
+    height: 33px;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    background: #F5F5F6;
+    line-height: 30px;
+}
+li:nth-child(2n+1) {
+    background: #EDF5FD;
+}
+li:before {
+    content: url("../lesson5/market.jpg");
+    margin-left: 34px;
+    padding-right: 10px;
+}
+.offer__left__button, .offer__middle__button, .offer-right-button {
+    width: 250px;
+    height: 38px;
+    margin: 14px auto;
+    display: block ;
+    background: #3371a6;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 #16436a;
+    cursor: pointer;
+
+}
+.offer__middle__button {
+    background: #ec8136;
+    box-shadow: 0 3px 0 0 #B3560B;
+}
+.offer__middle button:hover {
+    color: #364959;
+    transition: background-color 0.3s linear;
+}
+.offer__left button:hover {
+    color: #364959;
+    transition: background-color 0.3s linear;
+}
+.offer__right button:hover{
+    color: #364959;
+    transition: background-color 0.3s linear;
+}
+.offer__middle button:active {
+    background: #b1561b;
+    box-shadow: none;
+    transform: translateY(2px);
+    color: #fff;
+}
+.offer__left button:active,
+.offer__right button:active {
+    background: #16436a;
+    box-shadow: none;
+    transform: translateY(2px);
+    color: #fff;
+}
+button:focus {
+    outline: none;
+}

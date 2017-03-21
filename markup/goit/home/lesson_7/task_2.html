@@ -1,0 +1,218 @@
+<!--Задание 2
+Начинаем собирать наш project1.
+Макет  -> GO_iconic-graphics-free-psd-template.psd
+Необходимо сверстать шапку сайта (лого, меню, основной баннер с заголовком и кнопкой)
++Добавить на страницу уже сверстанные блоки с ценами и отзывами клиентов.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Site</title>
+    <link rel="stylesheet" type="text/css" href="task_2.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--Menu-->
+<section id="menu">
+    <div class="header">
+        <div class="logo">Company &nbsp;</div>
+        <div class="logo">NAME</div>
+        <div class="menu">
+            <ul class="menu__list">
+                <li class="menu__item_active"><a href="#Home" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
+                <li class="menu__item"><a href="#pricing" class="menu__link">Prising</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--first block about-->
+<section id="about">
+    <div class="intro">
+        <h1 class="intro__title"><span>We are specialist in</span><br/>Responsive designs, Stationary<br/>
+            And wordpress Themes</h1>
+        <p class="intro__text">Lorem Ipsum is simply dummy text of the printing and typesetting<br/> industry.
+            Lorem Ipsum has been the industry's standard dummy text.</p>
+        <a href="#" class="intro__button">Button name</a>
+    </div>
+</section>
+<!-- services -->
+<section id="services">
+    <div class="services">
+        <h2 class="services__title">Lorem Ipsum is simply dummy text of the printing</h2>
+        <div class="services__block">
+            <img class="services__img" src="Protect.png" alt="Protect"/>
+            <h3 class="service__block_tittle">Protect</h3>
+            <p class="services__text">100% of customer funds are stored offline in secure cold storage.
+                We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals,
+                and spending and transfer limits.
+            </p>
+        </div>
+        <div class="services__block">
+            <img class="services__img" src="Alert.png" alt="Alert"/>
+            <h3 class="service__block_tittle">Alert</h3>
+            <p class="services__text">100% of customer funds are stored offline in secure cold storage.
+                We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals,
+                and spending and transfer limits.
+            </p>
+        </div>
+        <div class="services__block">
+            <img class="services__img" src="Detect.png" alt="Detect"/>
+            <h3 class="service__block_tittle">Detect</h3>
+            <p class="services__text">100% of customer funds are stored offline in secure cold storage.
+                We offer two­ factor authentication on all accounts, mobile alerts and delayed withdrawals,
+                and spending and transfer limits.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- middle -->
+<section id="portfolio">
+    <div class="middle">
+        <h2 class="middle__tittle">Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry.
+            Lorem Ipsum has been....</h2>
+        <h3 class="middle__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+        <ul class="middle__list">
+            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.</li>
+            <li class="list__item_accent">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text.</li>
+            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.</li>
+        </ul>
+    </div>
+</section>
+<!--pricing-->
+<section id="pricing">
+    <div class="offers">
+        <h1>we have a very flexible offers for you to choose</h1>
+        <div class="offer__left">
+            <div class="offer__left__top">
+                <h3>Standard</h3>
+            </div>
+            <div class="price">
+                <h3>Iconic Graphics</h3>
+                <h2><sup><sup><sup>$</sup></sup></sup><strong>10</strong><sub>Monthly</sub></h2>
+                <ul>
+                    <li>Unmetered Traffic</li>
+                    <li>Unlimited Domain</li>
+                    <li>Unlimited Databases</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+                <button class="offer__left__button">Enroll Today</button>
+            </div>
+        </div>
+        <div class="offer__middle">
+            <div class="offer__middle__top">
+                <h3>Best value</h3>
+            </div>
+            <div class="price">
+                <h3>Iconic Graphics</h3>
+                <h2><sup><sup><sup>$</sup></sup></sup><strong>25</strong><sub>Monthly</sub></h2>
+                <ul>
+                    <li>PHP, PERL, ASP, JSP</li>
+                    <li>SEMI DEDICATED</li>
+                    <li>Staging on Production</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+                <button class="offer__middle__button">Enroll Today</button>
+            </div>
+        </div>
+        <div class="offer__right">
+            <div class="offer__right__top">
+                <h3>Ultimate</h3>
+            </div>
+            <div class="price">
+                <h3>Iconic Graphics</h3>
+                <h2><sup><sup><sup>$</sup></sup></sup><strong>35</strong><sub>Monthly</sub></h2>
+                <ul>
+                    <li>Semi Dedicated</li>
+                    <li>1TB Storage</li>
+                    <li>Faster Site, Better SEO</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+                <button class="offer-right-button">Enroll Today</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--testimonial-->
+<section id="reviews">
+    <div class="testimonial">
+        <div class="testimonials__inner">
+            <div class="review__title">
+                <h2><span>What</span> Client Says</h2>
+            </div>
+            <div class="review__testimonial">
+                <div class="testimonial__item__left">
+                    <div class="testimonial_photo">
+                        <img src="woman.jpg" alt="Staciya Trollio"/>
+                    </div>
+                    <div class="customer__block">
+                        <div class="customer__header">
+                            <p class="name">Staciya Trollio</p>
+                            <p class="customer">Customer</p>
+                        </div>
+                        <div class="customer__text">Lorem Ipsum is simply dummy text of the printing and industry.
+                            Lorem Ipsum has been the industry.
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__item__right">
+                    <div class="testimonial_photo">
+                        <img src="man.jpg" alt="David Soul"/>
+                    </div>
+                    <div class="customer__block">
+                        <div class="customer__header">
+                            <p class="name">David Soul</p>
+                            <p class="customer">Customer</p>
+                        </div>
+                        <div class="customer__text">Lorem Ipsum is simply dummy text of the printing and industry.
+                            Lorem Ipsum has been the industry.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--contacts-->
+<section id="contacts">
+    <div class="contacts">
+        <div class="contacts__inner">
+            <ul class="contact__inner_list">
+                <li class="contacts__address"><a href="#">Iconic Graphics</a></li>
+                <li>123 Main Street</li>
+                <li>EastWest</li>
+                <li>LHR 54500</li>
+                <li class="contact__phone"><a href="#">012.345.6789</a></li>
+                <li class="contact__email"><a href="#">info@iconicgraphics.com</a></li>
+            </ul>
+            <ul class="social__list">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="fb.png" alt="fb"/></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><img src="twitter.png" alt="twitter"/></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><img src="in.png" alt="linkedin"/></a></li>
+            </ul>
+
+        </div>
+        <div class="contacts__map"></div>
+    </div>
+</section>
+<!--footer-->
+<footer class="footer">
+    <div class="footer__copyright">Copyright © 2014 <span class="footer__copyright_name">Company Name.</span>
+        All rights reserved.
+    </div>
+    <div class="footer__designed-by">Designed by <span class="footer__site">
+            <a href="http://www.iconicgraphics.com/" target="_blank">IconicGraphics.com</a></span>
+    </div>
+</footer>
+</body>
+</html>
